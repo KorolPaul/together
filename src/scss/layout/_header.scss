@@ -1,0 +1,52 @@
+.header {
+    @include layout;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 11;
+    position: absolute;
+    // backdrop-filter: blur(10px);
+    top: 0;
+    left: 50%;
+    width: 100%;
+    box-sizing: border-box;
+    transform: translateX(-50%);
+    @include desktop {
+        max-width: $max-width;
+    }
+
+    .layout-without-header & {
+        position: relative;
+        transform: none;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+    }
+    
+    &_holder {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        min-height: 72px;
+        padding-top: 32px;
+        gap: 30px;
+        @include desktop {
+            align-items: center;
+        }
+    }
+    &_menu-wrapper {
+        display: flex;
+        gap: 150px;
+        align-items: center;
+        position: relative;
+        min-height: 19px;
+        top: -8px;
+        padding-right: 140px;
+        @include tablet {
+            padding-right: 145px;
+            gap:100px;
+            top: 0;
+        }
+    }
+}

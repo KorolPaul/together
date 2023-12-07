@@ -1,0 +1,55 @@
+input[type="radio"] {
+    position: absolute;
+    visibility: hidden;
+    z-index: -1;
+
+    & + label:not([class]) {
+        cursor: pointer;
+        display: inline-block;
+        box-sizing: border-box;
+        padding: 16px;
+        color: $color;
+        font-size: 15px;
+        line-height: 1;
+        position: relative;
+        margin: 8px 8px 0 0;
+        border: 1px solid currentColor;
+        border-radius: 40px;
+        white-space: nowrap;
+        transition: .2s $easing color,
+                    .2s $easing background;
+        @include tablet {
+            font-size: 24px;
+            padding: 24px;
+        }
+
+        span {
+            position: relative;
+            z-index: 1;
+        }
+
+        &::before {
+            content: '';
+            border-radius: 40px;
+            background: linear-gradient(45deg, #141418 13.06%, #787891 99.63%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0;
+            z-index: 0;
+            transition: .2s $easingSmooth opacity;
+        }
+    }
+    &:checked + label {
+        color: $cLight;
+        background: $color;
+    }
+    &:hover + label {
+        color: $cLight;
+    }
+    &:hover + label::before {
+        opacity: 1;
+    }
+}

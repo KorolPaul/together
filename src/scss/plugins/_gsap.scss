@@ -1,0 +1,22 @@
+.line {
+    font-kerning: none;
+    position: relative;
+}
+
+.line-mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 107%;
+    width: 100%;
+    z-index: 2;
+    background-color: black;
+}
+
+[data-split-mask] {
+    color: $cLight;
+
+    .section__green & {
+        color: $color;
+    }
+}

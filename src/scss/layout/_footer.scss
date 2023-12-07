@@ -1,0 +1,176 @@
+.footer {
+    background-color: $color;
+    padding: 80px 0;
+    position: relative;
+
+    &_holder {
+        @include layout;
+        position: relative;
+    }
+    
+    &_partner {
+        display: flex;
+        flex-direction: column;
+        gap: 34px;
+        @include tablet {
+            position: absolute;
+            top: 0;
+            right: 0;
+            gap: 24px;
+            width: 40%;
+        }
+        @include desktop {
+            gap: 46px;
+            position: static;
+            max-width: 392px;
+            margin: 0 0 60px;
+        }
+
+    }
+
+    &_menu {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin: 0 0 48px;
+        @include tablet {
+            gap: 9px;
+            margin-top: 200px;
+            width: 40%;
+        }
+        @include desktop {
+            width: auto;
+            margin-top: 0;
+        }
+
+        .social {
+            margin-top: 48px;
+            @include tablet {
+                margin-top: 40px;
+            }
+            @include desktop {
+                margin-top: 70px;
+            }
+        }
+    }
+
+    &_menu-link {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1;
+        display: block;
+        color: #9A9AAC;
+
+        &:hover {
+            text-decoration: none;
+            color: $cLight;
+        }
+    }
+
+    &_menu-link-icon {
+        width: 16px;
+        vertical-align: middle;
+        margin: 0 0 0 4px;
+        transition: .2s ease filter;
+
+        .footer_menu-link:hover & {
+            filter: brightness(2);
+        }
+    }
+
+    &_top {
+        padding: 0 0 60px;
+        position: relative;
+        @include tablet {
+            padding: 0 0 80px;
+            display: flex;
+            justify-content: space-between;
+        }
+        @include desktop {
+            max-width: none;
+        }
+    }
+
+    &_bottom {
+        border-top: 1px solid #9A9AAC;
+        display: flex;
+        padding: 16px 0 0;
+        font-size: 15px;
+        line-height: 21px;
+        color: $cGrayDark;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        @include tablet {
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            gap: 54px;
+        }
+        @include desktop {
+            padding: 34px 0 0;
+            justify-content: flex-start;
+            gap: 140px;
+        }
+    }
+
+    &_logo {
+        display: block;
+        margin-bottom: 88px;
+        @include tablet {
+            margin-bottom: 0;
+            max-width: 50%;
+        }
+        @include desktop {
+            width: 478px;
+            margin-top: -20px;
+        }
+    }
+
+    &_brands {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        align-items: flex-end;
+        @include tablet {
+            order: 2;
+        }
+    }
+
+    &_slogan {
+        color: #9A9AAC;
+    }
+
+    &_bottom-left {
+        display: contents;
+        @include tablet {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+            order: 2;
+        }
+        @include desktop {
+            display: contents;
+        }
+    }
+
+    &_copyrights {
+        @include tablet {
+            order: 1;
+        }
+    }
+
+    .button {
+        color: $cGray;
+
+        &:hover {
+            border-color: $cBright;
+            color: $color;
+        }
+
+        &:active {
+            background-color: $cBright;
+            color: $color;
+        }
+    }
+}

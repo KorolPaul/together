@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+@import "const";
+@import "mixins";
+@import "placeholders";
+
+/* basic */
+@import "basic/normalize";
+@import "basic/fonts";
+@import "basic/default";
+
+/*Form elements*/
+@import "form-elements/button";
+@import "form-elements/input-text";
+@import "form-elements/textarea";
+@import "form-elements/checkbox";
+@import "form-elements/radio";
+@import "form-elements/label";
+@import "form-elements/form";
+
+/*layout*/
+@import "layout/headings";
+@import "layout/header";
+@import "layout/logo";
+@import "layout/footer";
+@import "layout/menu";
+@import "layout/menu-toggle";
+@import "layout/section";
+@import "layout/tabs";
+@import "layout/preloader";
+@import "layout/section-title";
+@import "layout/accordion";
+@import "layout/download";
+@import "layout/scrollarea";
+@import "layout/article";
+@import "layout/animation";
+
+/* other */
+@import "plugins/tiny-slider";
+@import "plugins/gsap";
+
+/* other */
+@import "other/problems";
+@import "other/clients";
+@import "other/advantages";
+@import "other/process";
+@import "other/partnership";
+@import "other/partner";
+@import "other/social";
+@import "other/team";
+@import "other/contacts";

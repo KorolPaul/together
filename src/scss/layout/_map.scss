@@ -1,0 +1,121 @@
+.map {
+    width: 100%;
+    position: relative;
+    overflow: auto;
+
+    &_bg {
+        min-width: 800px;
+    }
+
+    &_place {
+        position: absolute;
+        border-radius: 50%;
+        width: 12px;
+        height: 12px;
+
+        &::after {
+            content: '';
+            background-color: $cBright;
+            box-shadow: 0 0 0 5px rgba($cBright, .25);
+            border-radius: 50%;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+
+    }
+
+    &_pin {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+
+        &::after {
+            content: '';
+            background: url(#{$img}/pin.svg);
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+            transform-origin: center;
+            transition: .2s $easing transform;
+        }
+
+        &:hover::after,
+        &.active::after {
+            transform: scale(2.4);
+        }
+    }
+
+    &_pin-flag {
+        position: absolute;
+        top: 35%;
+        left: 53%;
+        height: 33px;
+        width: 33px;
+        border-radius: 50%;
+        max-width: 200%;
+        transform: translate(-50%, -50%) scale(0);
+        z-index: 2;
+        transition: .2s $easingSmooth transform,
+                    .2s $easingSmooth opacity;
+
+        .map_pin:hover &,
+        .map_pin.active & {
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
+
+    &_tooltip {
+        position: absolute;
+        left: 6px;
+        bottom: 6px;
+        opacity: 0;
+        pointer-events: none;
+        border-radius: 15px;
+        padding: 15px 20px;
+        background-color: #eff3fe;
+        font-size: 11px;
+        color: #535479;
+        min-width: 170px;
+        box-sizing: border-box;
+        transition: .2s $easingSmooth opacity;
+
+        .map_place:hover &,
+        .map_place.active &,
+        .map_pin:hover &,
+        .map_pin.active & {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        span {
+            display: block;
+        }
+
+        &__image {
+            display: flex;
+            align-items: flex-start;
+            min-width: 240px;
+            gap: 11px;
+        }
+    }
+
+    &_tolltip-image {
+        border-radius: 50%;
+        width: 40px;
+        flex-shrink: 0;
+    }
+
+    &_tooltip-title {
+        font-size: 14px;
+        font-weight: 600;
+        display: block;
+        color: $color;
+    }
+}
