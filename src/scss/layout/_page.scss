@@ -1,0 +1,50 @@
+.page {
+    box-sizing: border-box;
+    min-height: 100vh;
+    position: relative;
+    @include tablet {
+        height: 100vh;
+    }
+
+    &:nth-child(1) {
+        background: linear-gradient(180deg, transparent 0%, transparent 82%, $cBright 100%);
+    }
+    &:nth-child(2) {
+        background: linear-gradient(180deg, $cBright 0%, $cBright 91%, $cLight 100%);
+    }
+    &:nth-child(3) {
+        background: linear-gradient(180deg, $cLight 0%, $cLight 82%, $cGreen 100%);
+        color: $color;
+    }
+    &:nth-child(4) {
+        background: $cGreen;
+    }
+
+    &_holder {
+        @include layout;
+        position: relative;
+        @include tablet {
+            height: 100%;
+        }
+    }
+
+    &_content {
+        @include layout-inner;
+    }
+
+    &_next {
+        background: url(#{$img}/arrow-down.svg) no-repeat right bottom;
+        padding: 0 48px 8px 0;
+        font-size: 24px;
+        line-height: 1;
+        letter-spacing: -1.2px;
+        position: absolute;
+        left: 69px;
+        bottom: 48px;
+        @include tablet {
+            font-size: 32px;
+            left: $indent;
+            bottom: 73px;
+        }
+    }
+}

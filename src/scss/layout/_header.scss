@@ -5,7 +5,7 @@
     top: 0;
     z-index: 11;
     position: absolute;
-    // backdrop-filter: blur(10px);
+    color: $cLight;
     top: 0;
     left: 50%;
     width: 100%;
@@ -13,15 +13,6 @@
     transform: translateX(-50%);
     @include desktop {
         max-width: $max-width;
-    }
-
-    .layout-without-header & {
-        position: relative;
-        transform: none;
-        top: auto;
-        left: auto;
-        right: auto;
-        bottom: auto;
     }
     
     &_holder {
@@ -35,18 +26,18 @@
             align-items: center;
         }
     }
-    &_menu-wrapper {
-        display: flex;
-        gap: 150px;
-        align-items: center;
-        position: relative;
-        min-height: 19px;
-        top: -8px;
-        padding-right: 140px;
+
+    &_button {
+        @include button-reset;
+        font-size: 24px;
+        letter-spacing: -1.6px;
+        color: $cLight;
+        padding: 14px 0 10px;
+        border-bottom: 4px solid currentColor;
         @include tablet {
-            padding-right: 145px;
-            gap:100px;
-            top: 0;
+            font-size: 32px;
         }
+
+
     }
 }

@@ -5,14 +5,16 @@ html {
 body {
     color: $cLight;
     background: $color;
-    font: #{$font-size__small}/#{1.18} $font-family;
+    font: #{$font-size__small}/#{1.2} $font-family;
     padding: 0;
-    letter-spacing: -0.04em;
+    letter-spacing: -1px;
     scroll-behavior: smooth;
     padding: 0;
-    @include desktop {
+    @include tablet {
+        font-size: 48px;
+    }
+    @include desktop-large {
         font-size: $font-size;
-        line-height: 1.25;
     }
 }
 

@@ -1,17 +1,19 @@
 %heading-1 {
     font-family: $font-family;
-    font-size: 40px;
-    line-height: 1;
+    font-size: 100px;
+    font-style: normal;
     font-weight: 400;
-    margin: 0 0 19px;
-    position: relative;
-    text-transform: uppercase;
+    line-height: .9;
+    letter-spacing: -5px;
+    margin: 0 0 70px;
     @include tablet {
-        font-size: 60px;
+        font-size: 200px;
+        line-height: 1.15;
+        letter-spacing: -10px;
     }
-    @include desktop {
-        font-size: 100px;
-        line-height: .95;
+    @include desktop-large {
+        font-size: 350px;
+        letter-spacing: -17.5px;
     }
 }
 %heading-2 {

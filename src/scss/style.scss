@@ -25,27 +25,12 @@
 @import "layout/footer";
 @import "layout/menu";
 @import "layout/menu-toggle";
-@import "layout/section";
+@import "layout/page";
 @import "layout/tabs";
-@import "layout/preloader";
-@import "layout/section-title";
-@import "layout/accordion";
-@import "layout/download";
-@import "layout/scrollarea";
-@import "layout/article";
-@import "layout/animation";
 
 /* other */
-@import "plugins/tiny-slider";
-@import "plugins/gsap";
-
-/* other */
-@import "other/problems";
-@import "other/clients";
-@import "other/advantages";
-@import "other/process";
-@import "other/partnership";
-@import "other/partner";
-@import "other/social";
-@import "other/team";
 @import "other/contacts";
+
+/* plugins */
+@import "plugins/fullpage";
+
