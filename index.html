@@ -30,12 +30,17 @@
 
     <main>
         <div id="fullpage">
-            <section class="page section">
+            <section class="page section" data-page="1">
+                <video class="page_video" src="src/img/video-mobile.mp4" data-src="src/img/video.mp4" loop muted autoplay playsinline></video>
                 <div class="page_holder">
-                    <div class="page_next">Our DNA</div>
+                    <footer class="footer">
+                        <div class="footer_holder">
+                            <div class="page_next">Our DNA</div>
+                        </div>
+                    </footer>
                 </div>
             </section>
-            <section class="page section">
+            <section class="page section" data-page="2">
                 <div class="page_holder">
                     <h1>Our DNA</h1>
                     <div class="page_content">
@@ -44,22 +49,54 @@
                             to make you feel, react, and remember. To ensure that when you witness our work, the first thing you'll want to do is say our name.
                         </p>
                     </div>
-                    <div class="page_next">Reach Ooout</div>
+                    <footer class="footer">
+                        <div class="footer_holder">
+                            <div class="page_next">Reach Ooout</div>
+                        </div>
+                    </footer>
                 </div>
             </section>
-            <section class="page section">
+            <section class="page section" data-page="3">
                 <div class="page_holder">
                     <h1>Reach Out</h1>
                     <div class="page_content">
                         <p>
-                            Tooogether is a collaborative force determined 
-                            to make you feel, react, and remember. To ensure that when you witness our work, the first thing you'll want to do is say our name.
+                            Drooop us a line
                         </p>
+                        <div class="tags">
+                            <button class="tag">UI/UX Design</button>
+                            <button class="tag">Web design</button>
+                            <button class="tag">Brand identity design</button>
+                            <button class="tag">Art direction</button>
+                            <button class="tag">Art</button>
+                            <button class="tag">Packaging design</button>
+                            <button class="tag">Exhibition graphics</button>
+                            <button class="tag">Icons and signage</button>
+                            <button class="tag">Motion graphics</button>
+                            <button class="tag">Photography</button>
+                            <button class="tag">3D Modeling & Animation</button>
+                        </div>
+
+                        <form class="form">
+                            <div class="form_row">
+                                <input type="email" placeholder="Your email">
+                            </div>
+                            <div class="form_row">
+                                <input type="text" placeholder="Tell us about project">
+                            </div>
+                            <div class="form_row">
+                                <input type="submit" value="Send">
+                            </div>
+                        </form>
                     </div>
-                    <div class="page_next">Reach Ooout</div>
+                    <footer class="footer">
+                        <div class="footer_holder">
+                            <div class="page_next">Reach Ooout</div>
+                        </div>
+                    </footer>
                 </div>
             </section>
-            <section class="page section">
+            <section class="page section" data-page="4">
                 <div class="page_holder">
                     <h1>Yo Huddle</h1>
                     <div class="page_content">
@@ -76,17 +113,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="page_next">Reach Ooout</div>
+                    <footer class="footer">
+                        <div class="footer_holder">
+                            <span class="copyright">Copyright Tooogether 2023</span>
+                        </div>
+                    </footer>
                 </div>
             </section>
         </div>
     </main>
-
-    <footer class="footer">
-        <div class="footer_holder">
-
-        </div>
-    </footer>
 
     <script src="./src/js/fullpage.min.js"></script>
     <script src="./src/js/main.js"></script>

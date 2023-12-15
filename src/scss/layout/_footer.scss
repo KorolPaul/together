@@ -1,8 +1,15 @@
 .footer {
     position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 48px;
+    @include layout;
+    @include tablet {
+        bottom: 46px;
+    }
 
     &_holder {
-        @include layout;
+        @include layout-inner;
         position: relative;
     }
     

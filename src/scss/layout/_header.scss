@@ -11,11 +11,17 @@
     width: 100%;
     box-sizing: border-box;
     transform: translateX(-50%);
+    transition: .2s $easing filter;
     @include desktop {
         max-width: $max-width;
     }
+
+    .fp-viewing-2 & {
+        filter: brightness(0);
+    }
     
     &_holder {
+        @include layout-inner;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;

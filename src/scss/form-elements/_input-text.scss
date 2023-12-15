@@ -4,29 +4,27 @@ input[type="search"],
 input[type="email"],
 input[type="url"],
 input[type="tel"] {
-    @include placeholder-color($cGray);
+    @include placeholder-color(#BBBBBB);
     color: $color;
     background: transparent;
     border: none;
     border-bottom: 1px solid $color;
     border-radius: 0;
     box-sizing: border-box;
-    font: 20px/1 $font-family;
+    font: 38px/1 $font-family;
+    letter-spacing: -1.9px;
     height: auto;
-    padding: 22px 0;
+    padding: 16px 0;
     width: 100%;
     transition: .2s $easingSmooth border-color,
                 .2s $easingSmooth color,
                 .2s $easingSmooth box-shadow;
     @include tablet {
-        font-size: 24px;
-        padding: 24px 0;
+        font-size: 58px;
     }
 
     &:focus {
         color: $color;
-        border-color: $color;
-        box-shadow: 0 3px 0 0 $color;
     }
 
     .error & {

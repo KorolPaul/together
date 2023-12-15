@@ -14,9 +14,9 @@
 @import "form-elements/input-text";
 @import "form-elements/textarea";
 @import "form-elements/checkbox";
-@import "form-elements/radio";
 @import "form-elements/label";
 @import "form-elements/form";
+@import "form-elements/submit";
 
 /*layout*/
 @import "layout/headings";
@@ -27,6 +27,8 @@
 @import "layout/menu-toggle";
 @import "layout/page";
 @import "layout/tabs";
+@import "layout/copyright";
+@import "layout/tags";
 
 /* other */
 @import "other/contacts";

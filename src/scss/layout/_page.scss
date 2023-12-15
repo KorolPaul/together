@@ -4,6 +4,8 @@
     position: relative;
     @include tablet {
         height: 100vh;
+        padding-top: 140px;
+        padding-bottom: 180px;
     }
 
     &:nth-child(1) {
@@ -22,7 +24,6 @@
 
     &_holder {
         @include layout;
-        position: relative;
         @include tablet {
             height: 100%;
         }
@@ -31,6 +32,15 @@
     &_content {
         @include layout-inner;
     }
+    
+    &_video {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
 
     &_next {
         background: url(#{$img}/arrow-down.svg) no-repeat right bottom;
@@ -38,13 +48,19 @@
         font-size: 24px;
         line-height: 1;
         letter-spacing: -1.2px;
-        position: absolute;
-        left: 69px;
-        bottom: 48px;
+        display: inline-block;
+        cursor: pointer;
+        transition: .2s $easing opacity;
         @include tablet {
             font-size: 32px;
-            left: $indent;
-            bottom: 73px;
+        }
+
+        &:hover {
+            opacity: .6;
+        }
+
+        [data-page="3"] & {
+            background-image: url(#{$img}/arrow-down-dark.svg);
         }
     }
 }
