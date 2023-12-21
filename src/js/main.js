@@ -40,10 +40,12 @@ videoElements.forEach(video => {
 
 // links hover
 document.querySelectorAll('.logo, .header_button, .contacts_link, .footer_menu-link').forEach(link=> link.addEventListener('mouseenter', (e) => {
-    const initialText = e.target.innerText;
-    const text = new ShuffleText(link);
-    text.start();
-    text.setText(initialText);
+    // const initialText = e.target.innerText;
+    // const text = new ShuffleText(link);
+    // text.start();
+    // text.setText(initialText);
+
+    
     //const text = e.target.innerText.split('');
     //const size = text.length;
     //let count = 0;

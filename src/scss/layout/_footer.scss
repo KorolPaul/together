@@ -3,6 +3,7 @@
     left: 0;
     right: 0;
     bottom: 48px;
+    z-index: 2;
     @include layout;
     @include tablet {
         bottom: 46px;
