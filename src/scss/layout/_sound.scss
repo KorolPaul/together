@@ -1,0 +1,21 @@
+.enable-sound,
+.disable-sound {
+    transition: .1s linear opacity;
+}
+
+.enable-sound {
+    .with-sound & {
+        opacity: 0;
+    }
+}
+
+.disable-sound {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+
+    .with-sound & {
+        opacity: 1;
+    }
+}

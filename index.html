@@ -2,19 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>SUAFI</title>
+    <title>Tooogether</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="48x48px.ico">
-    <link rel="icon" type="image/x-icon" href="48x48px.ico">
-    <link rel="icon" type="image/png" href="16x16px.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="32x32px.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="48x48pxmin-.png" sizes="48x48">
+
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
     <meta content="telephone=no" name="format-detection">
     <meta name="HandheldFriendly" content="true">
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
     <header class="header">
@@ -23,6 +29,10 @@
                 Tooogether
             </a>
             <div class="header_content">
+                <button class="header_video-sound">
+                    <lottie-player class="enable-sound" src="src/img/json/silence.json" background="transparent" speed="1" style="width: 32px; height: 32px" direction="1" mode="normal" loop autoplay></lottie-player>
+                    <lottie-player class="disable-sound" src="src/img/json/sound.json" background="transparent" speed="1" style="width: 32px; height: 32px" direction="1" mode="normal" loop autoplay></lottie-player>
+                </button>
                 <button class="header_button">Just сollaborate</button>
             </div>
         </div>
@@ -31,11 +41,18 @@
     <main>
         <div id="fullpage">
             <section class="page section" data-page="1">
+                
                 <video class="page_video" src="src/img/video-mobile.mp4" data-src="src/img/video.mp4" loop muted autoplay playsinline></video>
                 <div class="page_holder">
                     <footer class="footer">
                         <div class="footer_holder">
                             <div class="page_next">Our DNA</div>
+                            <div class="footer_menu">
+                                <a class="footer_menu-link" href="https://instagram.com/t_o_o_o_gether?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram</a>
+                                <a class="footer_menu-link" href="https://dribbble.com/tooogether" target="_blank" rel="noopener noreferrer">Dribbble</a>
+                                <a class="footer_menu-link" href="https://www.linkedin.com/company/tooogether" target="_blank" rel="noopener noreferrer">Linkedin</a>
+                                <a class="footer_menu-link" href="mailto:hey.tooogether@gmail.com" >hey.tooogether@gmail.com</a>
+                            </div>
                         </div>
                     </footer>
                 </div>
@@ -52,6 +69,12 @@
                     <footer class="footer">
                         <div class="footer_holder">
                             <div class="page_next">Reach Ooout</div>
+                            <div class="footer_menu">
+                                <a class="footer_menu-link" href="https://instagram.com/t_o_o_o_gether?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram</a>
+                                <a class="footer_menu-link" href="https://dribbble.com/tooogether" target="_blank" rel="noopener noreferrer">Dribbble</a>
+                                <a class="footer_menu-link" href="https://www.linkedin.com/company/tooogether" target="_blank" rel="noopener noreferrer">Linkedin</a>
+                                <a class="footer_menu-link" href="mailto:hey.tooogether@gmail.com" >hey.tooogether@gmail.com</a>
+                            </div>
                         </div>
                     </footer>
                 </div>
@@ -64,17 +87,49 @@
                             Drooop us a line
                         </p>
                         <div class="tags">
-                            <button class="tag">UI/UX Design</button>
-                            <button class="tag">Web design</button>
-                            <button class="tag">Brand identity design</button>
-                            <button class="tag">Art direction</button>
-                            <button class="tag">Art</button>
-                            <button class="tag">Packaging design</button>
-                            <button class="tag">Exhibition graphics</button>
-                            <button class="tag">Icons and signage</button>
-                            <button class="tag">Motion graphics</button>
-                            <button class="tag">Photography</button>
-                            <button class="tag">3D Modeling & Animation</button>
+                            <input type="checkbox" id="sphere-1" name="sphere" value="UI/UX Design">
+                            <label class="tag" for="sphere-1">
+                                UI/UX Design
+                            </label>
+                            <input type="checkbox" id="sphere-2" name="sphere" value="Web design">
+                            <label class="tag" for="sphere-2">
+                                Web design
+                            </label>
+                            <input type="checkbox" id="sphere-3" name="sphere" value="Brand identity design">
+                            <label class="tag" for="sphere-3">
+                                Brand identity design
+                            </label>
+                            <input type="checkbox" id="sphere-4" name="sphere" value="Art direction">
+                            <label class="tag" for="sphere-4">
+                                Art direction
+                            </label>
+                            <input type="checkbox" id="sphere-5" name="sphere" value="Art">
+                            <label class="tag" for="sphere-5">
+                                Art
+                            </label>
+                            <input type="checkbox" id="sphere-6" name="sphere" value="Packaging design">
+                            <label class="tag" for="sphere-6">
+                                Packaging design
+                            </label>
+                            <input type="checkbox" id="sphere-7" name="sphere" value="Exhibition graphics">
+                            <label class="tag" for="sphere-7">
+                                Exhibition graphics
+                            </label>
+                            <label class="tag" for="sphere-7">
+                                Icons and signage
+                            </label>
+                            <input type="checkbox" id="sphere-8" name="sphere" value="Icons and signage">
+                            <label class="tag" for="sphere-8">
+                                Motion graphics
+                            </label>
+                            <input type="checkbox" id="sphere-9" name="sphere" value="Photography">
+                            <label class="tag" for="sphere-9">
+                                Photography
+                            </label>
+                            <input type="checkbox" id="sphere-10" name="sphere" value="Photography">
+                            <label class="tag" for="sphere-10">
+                                3D Modeling & Animation
+                            </label>
                         </div>
 
                         <form class="form">
@@ -92,6 +147,12 @@
                     <footer class="footer">
                         <div class="footer_holder">
                             <div class="page_next">Reach Ooout</div>
+                            <div class="footer_menu">
+                                <a class="footer_menu-link" href="https://instagram.com/t_o_o_o_gether?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram</a>
+                                <a class="footer_menu-link" href="https://dribbble.com/tooogether" target="_blank" rel="noopener noreferrer">Dribbble</a>
+                                <a class="footer_menu-link" href="https://www.linkedin.com/company/tooogether" target="_blank" rel="noopener noreferrer">Linkedin</a>
+                                <a class="footer_menu-link" href="mailto:hey.tooogether@gmail.com" >hey.tooogether@gmail.com</a>
+                            </div>
                         </div>
                     </footer>
                 </div>
@@ -103,9 +164,9 @@
                         <div class="contacts">
                             <div class="contacts_column">
                                 <span class="contacts_title">Social</span>
-                                <a href="https://instagram.com/t_o_o_o_gether?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" class="contacts_link">Instagram</a>
-                                <a href="https://www.linkedin.com/company/tooogether" class="contacts_link">Dribbble</a>
-                                <a href="https://dribbble.com/tooogether" class="contacts_link">Linkedin</a>
+                                <a href="https://instagram.com/t_o_o_o_gether?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" class="contacts_link" target="_blank" rel="noopener noreferrer">Instagram</a>
+                                <a href="https://dribbble.com/tooogether" class="contacts_link" target="_blank" rel="noopener noreferrer">Dribbble</a>
+                                <a href="https://www.linkedin.com/company/tooogether" class="contacts_link" target="_blank" rel="noopener noreferrer">Linkedin</a>
                             </div>
                             <div class="contacts_column">
                                 <span class="contacts_title">Email</span>
@@ -115,7 +176,7 @@
                     </div>
                     <footer class="footer">
                         <div class="footer_holder">
-                            <span class="copyright">Copyright Tooogether 2023</span>
+                            <span class="copyright">© 2024 Tooogether</span>
                         </div>
                     </footer>
                 </div>
@@ -124,6 +185,7 @@
     </main>
 
     <script src="./src/js/fullpage.min.js"></script>
+    <script src="./src/js/shuffle-text.min.js"></script>
     <script src="./src/js/main.js"></script>
 </body>
 </html>

@@ -37,3 +37,44 @@ videoElements.forEach(video => {
         video.setAttribute('src', video.dataset.src);
     }
 });
+
+// links hover
+document.querySelectorAll('.logo, .header_button, .contacts_link, .footer_menu-link').forEach(link=> link.addEventListener('mouseenter', (e) => {
+    const initialText = e.target.innerText;
+    const text = new ShuffleText(link);
+    text.start();
+    text.setText(initialText);
+    //const text = e.target.innerText.split('');
+    //const size = text.length;
+    //let count = 0;
+    //let currentArray = e.target.innerText.split('');
+    //
+    //const interval = setInterval(() => {
+//
+    //    const newText = [currentArray[size - 1], ...currentArray.slice(0, size - 1)]
+    //    currentArray = newText;
+//
+    //    e.target.innerText = newText.join('');
+    //    
+    //    count++;
+    //    console.log(currentArray[size - 1], currentArray);
+//
+    //    if (count >= size) {
+    //        clearInterval(interval);
+    //    }
+    //}, 15);
+}));
+
+document.querySelector('.header_video-sound')?.addEventListener('click', function(e) {
+    const video = document.querySelector('video');
+
+    if (document.body.classList.contains('with-sound')) {
+        document.body.classList.remove('with-sound');
+        video.volume = 0;
+    } else {
+        document.body.classList.add('with-sound');
+        video.removeAttribute('muted');
+        video.muted = false;
+        video.volume = 1;
+    }
+});

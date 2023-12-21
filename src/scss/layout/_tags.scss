@@ -9,6 +9,7 @@
 
 .tag {
     @include button-reset;
+    cursor: pointer;
     font-size: 12px;
     line-height: 24px;
     height: 24px;
@@ -17,6 +18,8 @@
     font-weight: 400;
     background-color: rgba(#000, .05);
     color: $color;
+    transition: .2s $easingSmooth background-color,
+                .2s $easingSmooth color;
     @include tablet {
         font-size: 16px;
         line-height: 40px;
@@ -26,7 +29,8 @@
     }
 
     &:hover,
-    &.active {
+    &.active,
+    input:checked + & {
         background-color: $color;
         color: $cLight;
     }
