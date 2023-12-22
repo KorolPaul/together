@@ -38,33 +38,47 @@ videoElements.forEach(video => {
     }
 });
 
+function shuffle(array) {
+    let currentIndex = array.length, randomIndex;
+
+    // While there remain elements to shuffle.
+    while (currentIndex > 0) {
+
+        // Pick a remaining element.
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+
+        // And swap it with the current element.
+        [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex], array[currentIndex]];
+    }
+
+    return array;
+}
+
+
 // links hover
 document.querySelectorAll('.logo, .header_button, .contacts_link, .footer_menu-link').forEach(link=> link.addEventListener('mouseenter', (e) => {
-    // const initialText = e.target.innerText;
-    // const text = new ShuffleText(link);
-    // text.start();
-    // text.setText(initialText);
+    const initialText = e.target.innerText;
+    const initialTextArray = e.target.innerText.split('');
 
-    
-    //const text = e.target.innerText.split('');
-    //const size = text.length;
-    //let count = 0;
-    //let currentArray = e.target.innerText.split('');
-    //
-    //const interval = setInterval(() => {
-//
-    //    const newText = [currentArray[size - 1], ...currentArray.slice(0, size - 1)]
-    //    currentArray = newText;
-//
-    //    e.target.innerText = newText.join('');
-    //    
-    //    count++;
-    //    console.log(currentArray[size - 1], currentArray);
-//
-    //    if (count >= size) {
-    //        clearInterval(interval);
-    //    }
-    //}, 15);
+    let count = 0;
+
+    const interval = setInterval(() => {
+
+        const newText = shuffle(initialTextArray);
+
+        currentArray = newText;
+        e.target.innerText = newText.join('');
+        
+        count++;
+
+        if (count >= 7) {
+            clearInterval(interval);
+            console.log(initialText);
+            e.target.innerText = initialText;
+        }
+    }, 25);
 }));
 
 document.querySelector('.header_video-sound')?.addEventListener('click', function(e) {

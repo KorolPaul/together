@@ -118,11 +118,16 @@ html.fp-enabled,
     @include tablet {
         @include layout;
         box-sizing: border-box;
+        max-width: none;
         left: 0;
         width: 100%;
         top: auto;
         bottom: 80px;
         right: auto;
+    }
+    @include desktop {
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 

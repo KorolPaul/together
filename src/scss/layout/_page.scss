@@ -18,17 +18,17 @@
         z-index: 1;
     }
 
-    &:nth-child(1)::after {
+    &:nth-child(1) {
         background: linear-gradient(180deg, transparent 0%, transparent 82%, $cBright 100%);
     }
-    &:nth-child(2)::after {
-        background: linear-gradient(180deg, $cBright 0%, $cBright 91%, $cLight 100%);
+    &:nth-child(2) {
+        background: $cBright;
     }
-    &:nth-child(3)::after {
-        background: linear-gradient(180deg, $cLight 0%, $cLight 82%, $cGreen 100%);
+    &:nth-child(3) {
+        background: $cLight;
         color: $color;
     }
-    &:nth-child(4)::after {
+    &:nth-child(4) {
         background: $cGreen;
     }
 
@@ -52,6 +52,24 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+
+    &_shadow {
+        background: linear-gradient(180deg, rgba(255, 0, 140, 0.00) 0%, $cBright 100%);
+        position: absolute;
+        left: 0;
+        width: 100vw;
+        bottom: 0;
+        height: 18.5vh;
+        animation: shadow-pulsation 5s $easingSmooth infinite;
+
+        &__light {
+            background: linear-gradient(180deg, rgba(255, 0, 140, 0.00) 0%, $cLight 100%);
+        }
+
+        &__green {
+            background: linear-gradient(180deg, rgba(255, 0, 140, 0.00) 0%, $cGreen 100%);
+        }
     }
 
     h1 {
@@ -81,5 +99,19 @@
         [data-page="3"] & {
             background-image: url(#{$img}/arrow-down-dark.svg);
         }
+    }
+}
+
+@keyframes shadow-pulsation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.4);
+    }
+
+    100% {
+        transform: scale(1);
     }
 }
