@@ -22,14 +22,21 @@
     }
 
     &_success-text {
-        display: block;
+        display: none;
         font-size: 20px;
         line-height: 24px;
         padding: 16px 0;
         @include tablet {
             font-size: 58px;
             line-height: 59px;
-            display: none;
         }
+
+        .success & {
+            display: block;
+        }
+    }
+
+    &.success input[type="submit"] {
+        display: none;
     }
 }

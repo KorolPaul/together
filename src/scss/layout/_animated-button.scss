@@ -6,6 +6,9 @@
         right: 0;
         border-bottom: 4px solid currentColor;
         bottom: -6px;
+        @include tablet {
+            bottom: 7px;
+        }
     }
 
     &_shadow {

@@ -60,11 +60,9 @@ function shuffle(array) {
     return array;
 }
 
-
-// links hover
-document.querySelectorAll('[data-text]').forEach(link=> link.addEventListener('mouseenter', (e) => {
-    const initialText = e.target.dataset.text;
-    const initialTextArray = e.target.innerText.split('');
+function shuffleText(target) {
+    const initialText = target.dataset.text;
+    const initialTextArray = target.innerText.split('');
 
     let count = 0;
 
@@ -73,16 +71,20 @@ document.querySelectorAll('[data-text]').forEach(link=> link.addEventListener('m
         const newText = shuffle(initialTextArray);
 
         currentArray = newText;
-        e.target.innerText = newText.join('');
-        
+        target.innerText = newText.join('');
+
         count++;
 
         if (count >= 7) {
             clearInterval(interval);
-            e.target.innerText = initialText;
+            target.innerText = initialText;
         }
     }, 25);
-}));
+}
+
+
+// links hover
+document.querySelectorAll('[data-text]').forEach(link=> link.addEventListener('mouseenter', (e) => shuffleText(e.target)));
 
 document.querySelector('.header_video-sound')?.addEventListener('click', function(e) {
     const video = document.querySelector('video');
@@ -142,3 +144,36 @@ document.querySelector('.animated-button').addEventListener('click', (e) => {
         fullpage_api.moveTo(4)
     }
 })
+
+/* form submit */
+var form = document.getElementById("form");
+
+async function handleSubmit(event) {
+    event.preventDefault();
+    var data = new FormData(event.target);
+    form.querySelector('input[type="submit"]').disabled = true;
+
+    fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            form.classList.add('success');
+
+            setTimeout(() => {
+                shuffleText(form.querySelector('.form_success-text'));
+            }, 50);
+            form.reset()
+        } else {
+            response.json().then(data => {
+                console.error(data);
+            })
+        }
+    }).catch(error => {
+        console.error(data);
+    });
+}
+form.addEventListener("submit", handleSubmit);

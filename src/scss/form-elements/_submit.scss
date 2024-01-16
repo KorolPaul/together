@@ -22,4 +22,9 @@ input[type="submit"] {
     &:hover {
         opacity: .7;
     }
+
+    &:disabled {
+        opacity: .6;
+        pointer-events: none;
+    }
 }
