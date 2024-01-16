@@ -25,7 +25,7 @@
 <body>
     <header class="header">
         <div class="header_holder">
-            <a class="logo" href="/">
+            <a class="logo" href="/" data-text="Tooogether">
                 Tooogether
             </a>
             <div class="header_content">
@@ -33,7 +33,14 @@
                     <lottie-player class="enable-sound" src="src/img/json/silence.json" background="transparent" speed="1" style="width: 32px; height: 32px" direction="1" mode="normal" loop autoplay></lottie-player>
                     <lottie-player class="disable-sound" src="src/img/json/sound.json" background="transparent" speed="1" style="width: 32px; height: 32px" direction="1" mode="normal" loop autoplay></lottie-player>
                 </button>
-                <button class="header_button">Just сollaborate</button>
+                <button class="header_button animated-button" data-text="Just сollaborate">
+                    <span class="animated-button_main-letter">J</span><span class="animated-button_letter">u</span><span class="animated-button_letter">s</span><span class="animated-button_letter">t</span>
+
+                    <span class="animated-button_main-letter">с</span><span class="animated-button_letter">o</span><span class="animated-button_letter">l</span><span class="animated-button_letter">l</span><span class="animated-button_letter">a</span><span class="animated-button_letter">b</span><span class="animated-button_letter">o</span><span class="animated-button_letter">r</span><span class="animated-button_letter">a</span><span class="animated-button_letter">t</span><span class="animated-button_letter">e</span>
+                    <div class="animated-button_shadow"></div>
+                    <div class="animated-button_shadow"></div>
+                    <div class="animated-button_shadow"></div>
+                </button>
             </div>
         </div>
     </header>
@@ -42,25 +49,35 @@
         <div id="fullpage">
             <section class="page section" data-page="1">
                 
-                <video class="page_video" src="src/img/video-mobile.mp4" data-src="src/img/video.mp4" loop muted autoplay playsinline></video>
+                <video class="page_video" src="src/img/video-mobile.mp4" data-src="src/img/video.mp4" loop muted autoplay playsinline data-keepplaying></video>
                 <div class="page_holder">
                     <footer class="footer">
                         <div class="footer_holder">
                             <div class="page_next">Our DNA</div>
                             <div class="footer_menu">
-                                <a class="footer_menu-link" href="https://instagram.com/t_o_o_o_gether?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram</a>
-                                <a class="footer_menu-link" href="https://dribbble.com/tooogether" target="_blank" rel="noopener noreferrer">Dribbble</a>
-                                <a class="footer_menu-link" href="https://www.linkedin.com/company/tooogether" target="_blank" rel="noopener noreferrer">Linkedin</a>
-                                <a class="footer_menu-link" href="mailto:hey.tooogether@gmail.com" >hey.tooogether@gmail.com</a>
+                                <a class="footer_menu-link" href="https://instagram.com/t_o_o_o_gether?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" data-text="Instagram">Instagram</a>
+                                <a class="footer_menu-link" href="https://dribbble.com/tooogether" target="_blank" rel="noopener noreferrer" data-text="Dribbble">Dribbble</a>
+                                <a class="footer_menu-link" href="https://www.linkedin.com/company/tooogether" target="_blank" rel="noopener noreferrer" data-text="Linkedin">Linkedin</a>
+                                <a class="footer_menu-link" href="mailto:hey.tooogether@gmail.com" data-text="hey.tooogether@gmail.com" >hey.tooogether@gmail.com</a>
                             </div>
                         </div>
                     </footer>
-                    <div class="page_shadow"></div>
+                    <div class="aurora">
+                        <div class="aurora_layer aurora_layer__one">
+                            <div class="aurora_layer aurora_layer__two">
+                                <div class="aurora_layer aurora_layer__three">
+                                    <div class="aurora_layer aurora_layer__four">
+                                        <div class="aurora_layer aurora_layer__five"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section class="page section" data-page="2">
                 <div class="page_holder">
-                    <h1>Our DNA</h1>
+                    <h1 data-text="Our DNA">Our DNA</h1>
                     <div class="page_content">
                         <p>
                             Tooogether is a collaborative force determined 
@@ -71,19 +88,29 @@
                         <div class="footer_holder">
                             <div class="page_next">Reach Ooout</div>
                             <div class="footer_menu">
-                                <a class="footer_menu-link" href="https://instagram.com/t_o_o_o_gether?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram</a>
-                                <a class="footer_menu-link" href="https://dribbble.com/tooogether" target="_blank" rel="noopener noreferrer">Dribbble</a>
-                                <a class="footer_menu-link" href="https://www.linkedin.com/company/tooogether" target="_blank" rel="noopener noreferrer">Linkedin</a>
-                                <a class="footer_menu-link" href="mailto:hey.tooogether@gmail.com" >hey.tooogether@gmail.com</a>
+                                <a class="footer_menu-link" href="https://instagram.com/t_o_o_o_gether?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" data-text="Instagram">Instagram</a>
+                                <a class="footer_menu-link" href="https://dribbble.com/tooogether" target="_blank" rel="noopener noreferrer" data-text="Dribbble">Dribbble</a>
+                                <a class="footer_menu-link" href="https://www.linkedin.com/company/tooogether" target="_blank" rel="noopener noreferrer" data-text="Linkedin">Linkedin</a>
+                                <a class="footer_menu-link" href="mailto:hey.tooogether@gmail.com" data-text="hey.tooogether@gmail.com" >hey.tooogether@gmail.com</a>
                             </div>
                         </div>
                     </footer>
-                    <div class="page_shadow page_shadow__light"></div>
+                    <div class="aurora">
+                        <div class="aurora_layer aurora_layer__one">
+                            <div class="aurora_layer aurora_layer__two">
+                                <div class="aurora_layer aurora_layer__three">
+                                    <div class="aurora_layer aurora_layer__four">
+                                        <div class="aurora_layer aurora_layer__five"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section class="page section" data-page="3">
                 <div class="page_holder">
-                    <h1>Reach Out</h1>
+                    <h1 data-text="Reach Out">Reach Out</h1>
                     <div class="page_content">
                         <p>
                             Drooop us a line
@@ -117,19 +144,20 @@
                             <label class="tag" for="sphere-7">
                                 Exhibition graphics
                             </label>
-                            <label class="tag" for="sphere-7">
-                                Icons and signage
-                            </label>
                             <input type="checkbox" id="sphere-8" name="sphere" value="Icons and signage">
                             <label class="tag" for="sphere-8">
-                                Motion graphics
+                                Icons and signage
                             </label>
-                            <input type="checkbox" id="sphere-9" name="sphere" value="Photography">
+                            <input type="checkbox" id="sphere-9" name="sphere" value="Motion graphics">
                             <label class="tag" for="sphere-9">
-                                Photography
+                                Motion graphics
                             </label>
                             <input type="checkbox" id="sphere-10" name="sphere" value="Photography">
                             <label class="tag" for="sphere-10">
+                                Photography
+                            </label>
+                            <input type="checkbox" id="sphere-11" name="sphere" value="3D Modeling & Animation">
+                            <label class="tag" for="sphere-11">
                                 3D Modeling & Animation
                             </label>
                         </div>
@@ -143,43 +171,55 @@
                             </div>
                             <div class="form_row">
                                 <input type="submit" value="Send">
+                                <span class="form_success-text">Whooosh</span>
                             </div>
                         </form>
                     </div>
                     <footer class="footer">
                         <div class="footer_holder">
-                            <div class="page_next">Reach Ooout</div>
+                            <div class="page_next">Drop us a line</div>
                             <div class="footer_menu">
-                                <a class="footer_menu-link" href="https://instagram.com/t_o_o_o_gether?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">Instagram</a>
-                                <a class="footer_menu-link" href="https://dribbble.com/tooogether" target="_blank" rel="noopener noreferrer">Dribbble</a>
-                                <a class="footer_menu-link" href="https://www.linkedin.com/company/tooogether" target="_blank" rel="noopener noreferrer">Linkedin</a>
-                                <a class="footer_menu-link" href="mailto:hey.tooogether@gmail.com" >hey.tooogether@gmail.com</a>
+                                <a class="footer_menu-link" href="https://instagram.com/t_o_o_o_gether?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" data-text="Instagram">Instagram</a>
+                                <a class="footer_menu-link" href="https://dribbble.com/tooogether" target="_blank" rel="noopener noreferrer" data-text="Dribbble">Dribbble</a>
+                                <a class="footer_menu-link" href="https://www.linkedin.com/company/tooogether" target="_blank" rel="noopener noreferrer" data-text="Linkedin">Linkedin</a>
+                                <a class="footer_menu-link" href="mailto:hey.tooogether@gmail.com" data-text="hey.tooogether@gmail.com" >hey.tooogether@gmail.com</a>
                             </div>
                         </div>
                     </footer>
-                    <div class="page_shadow page_shadow__green"></div>
+                    <div class="aurora">
+                        <div class="aurora_layer aurora_layer__one">
+                            <div class="aurora_layer aurora_layer__two">
+                                <div class="aurora_layer aurora_layer__three">
+                                    <div class="aurora_layer aurora_layer__four">
+                                        <div class="aurora_layer aurora_layer__five"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section class="page section" data-page="4">
                 <div class="page_holder">
-                    <h1>Yo Huddle</h1>
+                    <h1 data-text="Yo Huddle">Yo Huddle</h1>
                     <div class="page_content">
                         <div class="contacts">
                             <div class="contacts_column">
                                 <span class="contacts_title">Social</span>
-                                <a href="https://instagram.com/t_o_o_o_gether?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" class="contacts_link" target="_blank" rel="noopener noreferrer">Instagram</a>
-                                <a href="https://dribbble.com/tooogether" class="contacts_link" target="_blank" rel="noopener noreferrer">Dribbble</a>
-                                <a href="https://www.linkedin.com/company/tooogether" class="contacts_link" target="_blank" rel="noopener noreferrer">Linkedin</a>
+                                <a href="https://instagram.com/t_o_o_o_gether?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" class="contacts_link" target="_blank" rel="noopener noreferrer" data-text="Instagram">Instagram</a>
+                                <a href="https://dribbble.com/tooogether" class="contacts_link" target="_blank" rel="noopener noreferrer" data-text="Dribbble">Dribbble</a>
+                                <a href="https://www.linkedin.com/company/tooogether" class="contacts_link" target="_blank" rel="noopener noreferrer" data-text="Linkedin">Linkedin</a>
                             </div>
                             <div class="contacts_column">
                                 <span class="contacts_title">Email</span>
-                                <a href="mailto:hey.tooogether@gmail.com" class="contacts_link">hey.tooogether@gmail.com</a>
+                                <a href="mailto:hey.tooogether@gmail.com" class="contacts_link" data-text="hey.tooogether@gmail.com">hey.tooogether@gmail.com</a>
                             </div>
                         </div>
                     </div>
                     <footer class="footer">
                         <div class="footer_holder">
-                            <span class="copyright">© 2024 Tooogether</span>
+                            <div class="page_next" data-up>Gooo Up</div>
+                            <span class="copyright" data-text="© 2024 Tooogether">© 2024 Tooogether</span>
                         </div>
                     </footer>
                 </div>

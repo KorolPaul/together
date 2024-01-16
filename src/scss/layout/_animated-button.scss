@@ -1,0 +1,74 @@
+.animated-button {
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        border-bottom: 4px solid currentColor;
+        bottom: -6px;
+    }
+
+    &_shadow {
+        content: '';
+        background: #000;
+        filter: blur(50px);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        opacity: 0;
+        transition: .2s $easingSmooth opacity,
+                    .2s $easingSmooth background-color;
+
+        .active & {
+            opacity: 1;
+        }
+
+        .fp-viewing-1 & {
+            background: $cBright;
+        }
+        .fp-viewing-2 & {
+            background: $cLight;
+        }
+        .fp-viewing-3 & {
+            background: $cGreen;
+        }
+    }
+
+    &_main-letter,
+    &_letter {
+        pointer-events: none;
+        display: inline-block;
+        vertical-align: bottom  ;
+    }
+
+    &_letter {
+        overflow: hidden;
+        width: 0;
+        @include tablet {
+            width: auto;
+        }
+
+        .active & {
+            animation: letter .01s linear forwards;
+        }
+
+        @for $i from 1 through 20 {
+            &:nth-child(#{$i}) {
+                animation-delay: #{0.01 * $i}s;
+            }
+        }
+    }
+}
+
+@keyframes letter {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: auto;
+    }
+}

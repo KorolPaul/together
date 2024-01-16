@@ -2,7 +2,16 @@
     font-size: 24px;
     letter-spacing: -1.2px;
     color: $cLight;
+    position: absolute;
+    left: 32px;
+    top: 64px;
+    z-index: 1;
     @include tablet {
         font-size: 32px;
+        position: static;
+    }
+
+    .fp-viewing-2 & {
+        color: $color;
     }
 }

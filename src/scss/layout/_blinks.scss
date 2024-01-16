@@ -1,0 +1,74 @@
+.blinks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: transform 2.4s $easingSmooth;
+
+    &_orange,
+    &_teal {
+        position: fixed;
+        top: 40%;
+        width: 100px;
+        height: 100px;
+        filter: blur(40px);
+        @include tablet {
+            width: 400px;
+            height: 400px;
+            filter: blur(125px);
+        }
+    }
+
+    &_orange {
+        animation: floating 10s linear infinite;
+        // background-color: $cOrangeLight;
+        background-color: rgba(198, 239, 242, .5);
+        left: 25%;
+    } 
+
+    &_teal {
+        animation: floating 10s linear 1s infinite reverse;
+        background-color: rgba(236, 177, 238, .5);
+        // background-color: #8bd4da;
+        left: 60%;
+        top: 30%;
+    }
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    10% {
+        transform: translate(-36%, -12%) scale(1.2, 1.3);
+    }
+    20% {
+        transform: translate(-85%, -23%) scale(1, .8);
+    }
+    30% {
+        transform: translate(-73%, -7%) scale(1.1, 1.1);
+    }
+    40% {
+        transform: translate(0, 1%) scale(1.3, 1.2);
+    }
+    50% {
+        transform: translateY(2%, 6%) scale(1.5, 1.3);
+    }
+    60% {
+        transform: translate(12%, 13%) scale(1, 1);
+    }
+    70% {
+        transform: translate(20%, 16%) scale(.8, 0.8);
+    }
+    80% {
+        transform: translate(12%, 9%) scale(1.5, 1.3);
+    }
+    90% {
+        transform: translate(7%, 4%) scale(1.3, 1.1);
+    }
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+}

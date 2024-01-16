@@ -2,30 +2,19 @@
     box-sizing: border-box;
     min-height: 100vh;
     position: relative;
+    overflow: hidden;
     @include tablet {
         height: 100vh;
-        padding-top: 140px;
-        padding-bottom: 180px;
-    }
-
-    &::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 1;
     }
 
     &:nth-child(1) {
-        background: linear-gradient(180deg, transparent 0%, transparent 82%, $cBright 100%);
+        background: linear-gradient(180deg, transparent 0%, transparent 97%, $cBright 100%);
     }
     &:nth-child(2) {
-        background: $cBright;
+        background: linear-gradient(180deg, $cBright 0%, $cBright 97%, $cLight 100%);
     }
     &:nth-child(3) {
-        background: $cLight;
+        background: linear-gradient(180deg, $cLight 0%, $cLight 97%, $cGreen 100%);
         color: $color;
     }
     &:nth-child(4) {
@@ -34,15 +23,14 @@
 
     &_holder {
         @include layout;
-        @include tablet {
-            height: 100%;
-        }
     }
 
     &_content {
         @include layout-inner;
-        position: relative;
-        z-index: 2;
+        padding-bottom: 120px;
+        @include tablet {
+            padding-bottom: 280px;
+        }
     }
     
     &_video {
@@ -54,29 +42,6 @@
         object-fit: cover;
     }
 
-    &_shadow {
-        background: linear-gradient(180deg, rgba(255, 0, 140, 0.00) 0%, $cBright 100%);
-        position: absolute;
-        left: 0;
-        width: 100vw;
-        bottom: 0;
-        height: 18.5vh;
-        animation: shadow-pulsation 5s $easingSmooth infinite;
-
-        &__light {
-            background: linear-gradient(180deg, rgba(255, 0, 140, 0.00) 0%, $cLight 100%);
-        }
-
-        &__green {
-            background: linear-gradient(180deg, rgba(255, 0, 140, 0.00) 0%, $cGreen 100%);
-        }
-    }
-
-    h1 {
-        position: relative;
-        z-index: 2;
-    }
-
     &_next {
         background: url(#{$img}/arrow-down.svg) no-repeat right bottom;
         padding: 0 48px 8px 0;
@@ -85,8 +50,6 @@
         letter-spacing: -1.2px;
         display: inline-block;
         cursor: pointer;
-        z-index: 2;
-        position: relative;
         transition: .2s $easing opacity;
         @include tablet {
             font-size: 32px;
@@ -99,19 +62,21 @@
         [data-page="3"] & {
             background-image: url(#{$img}/arrow-down-dark.svg);
         }
-    }
-}
 
-@keyframes shadow-pulsation {
-    0% {
-        transform: scale(1);
+        &[data-up] {
+            background: url(#{$img}/arrow-up.svg) no-repeat right top;
+        }
     }
 
-    50% {
-        transform: scale(1.4);
+    h1 {
+        padding-top: 120px;
+        @include tablet {
+            padding-top: 140px;
+        }
     }
 
-    100% {
-        transform: scale(1);
+    &:not(:first-child) .fp-overflow {
+        // height: 100%;
+        // mask: linear-gradient(to bottom, transparent 0%, transparent 9%, #fff 25%, #fff 100%);
     }
 }

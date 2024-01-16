@@ -20,4 +20,16 @@
             display: block;
         }
     }
+
+    &_success-text {
+        display: block;
+        font-size: 20px;
+        line-height: 24px;
+        padding: 16px 0;
+        @include tablet {
+            font-size: 58px;
+            line-height: 59px;
+            display: none;
+        }
+    }
 }

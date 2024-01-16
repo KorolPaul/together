@@ -1,0 +1,98 @@
+
+.aurora {
+    bottom: -60px;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    color: $cBright;
+
+    .page:nth-child(2) & {
+        color: $cLight;
+    }
+    .page:nth-child(3) & {
+        color: $cGreen;
+    }
+
+    &_layer {
+        border-radius: 50%;
+        height: 50px;
+        width: 100%;
+        position: relative;
+        margin: auto;
+
+        &__one {
+            animation: one 15s $easingSmooth infinite alternate;
+        }
+
+        &__two {
+            width: 90%;
+            animation: two 12s $easingSmooth infinite alternate;
+        }
+
+        &__three {
+            width: 80%;
+            animation: three 11s $easingSmooth infinite alternate;
+        }
+
+        &__four {
+            width: 70%;
+            animation: four 10s $easingSmooth infinite alternate;
+        }
+
+        &__five {
+            width: 60%;
+            animation: five 9s $easingSmooth infinite alternate;
+        }
+    }
+}
+
+
+@keyframes one {
+    from {
+        box-shadow: 0 0 350px 40px currentColor;
+    }
+
+    to {
+        box-shadow: 0 0 100px 35px currentColor;
+    }
+}
+
+@keyframes two {
+    from {
+        box-shadow: 0 0 350px 40px currentColor;
+    }
+
+    to {
+        box-shadow: 0 0 100px 35px currentColor;
+    }
+}
+
+@keyframes three {
+    from {
+        box-shadow: 0 0 350px 40px currentColor;
+    }
+
+    to {
+        box-shadow: 0 0 100px 35px currentColor
+    }
+}
+
+@keyframes four {
+    from {
+        shadow: 0 0 350px 20px currentColor;
+    }
+
+    to {
+        shadow: 0 0 100px 15px currentColor;
+    }
+}
+
+@keyframes five {
+    from {
+        box-shadow: 0 0 350px 20px currentColor;
+    }
+
+    to {
+        box-shadow: 0 0 100px 15px currentColor;
+    }
+}

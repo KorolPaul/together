@@ -19,16 +19,6 @@ body {
 }
 
 main {
-    section:first-child {
-        padding-top: 136px;
-        @include tablet {
-            padding-top: 152px;
-        }
-        @include desktop {
-            padding-top: 210px;
-        }
-
-    }
 
     .layout-without-header & section:first-child {
         padding-top: 0;
