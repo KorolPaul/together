@@ -1,3 +1,12 @@
+const isMobile = window.innerWidth <= 768;
+const videoElements = document.querySelectorAll('.page_video');
+
+if (!isMobile) {
+    document.querySelectorAll('.page_video__desktop').forEach(video => {
+        video.play();
+    });
+}
+
 new fullpage('#fullpage', {
     //options here
     autoScrolling: true,
@@ -8,6 +17,13 @@ new fullpage('#fullpage', {
     navigationPosition: 'bottom',
     easing: 'easeInOutCubic',
     easingcss3: 'cubic-bezier(0.38, 0.005, 0.215, 1)',
+    lazyLoading: false,
+    observer: false,
+    afterRender: function () {
+        videoElements.forEach(video => {
+            video.setAttribute('autoplay');
+        });
+    }
 });
 
 document.querySelectorAll('.page_next').forEach(el => el.addEventListener('click', (e) => {
@@ -20,7 +36,6 @@ document.querySelectorAll('.page_next').forEach(el => el.addEventListener('click
 }));
 
 /* video */
-const videoElements = document.querySelectorAll('.page_video');
 
 // if (videoWrapper) {
 //     videoWrapper.addEventListener('click', function (e) {
@@ -35,12 +50,7 @@ const videoElements = document.querySelectorAll('.page_video');
 //     });
 // }
 
-const isMobile = window.innerWidth <= 768;
-videoElements.forEach(video => {
-    if (video.dataset.src && !isMobile) {
-        video.setAttribute('src', video.dataset.src);
-    }
-});
+
 
 function shuffle(array) {
     let currentIndex = array.length, randomIndex;

@@ -18,12 +18,15 @@
     }
 
     &_link {
-        font-size: 38px;
+        font-size: 25px;
         font-style: normal;
         line-height: 1;
         letter-spacing: -1.9px;
         display: block;
         margin-bottom: 16px;
         color: $cLight;
+        @include media(512px) {
+            font-size: 38px;
+        }
     }
 }
