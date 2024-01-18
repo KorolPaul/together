@@ -62,21 +62,12 @@ html.fp-enabled,
 }
 
 .fp-controlArrow {
-    -webkit-user-select: none;
-    /* webkit (safari, chrome) browsers */
-    -moz-user-select: none;
-    /* mozilla browsers */
-    -khtml-user-select: none;
-    /* webkit (konqueror) browsers */
     -ms-user-select: none;
-    /* IE10+ */
     position: absolute;
     z-index: 4;
     top: 50%;
     cursor: pointer;
     margin-top: -38px;
-    -webkit-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
 
@@ -189,7 +180,12 @@ html.fp-enabled,
     transform: scale(1, 1);
     transform-origin: center;
     transition: .2s $easingSmooth transform,
+                .2s $easingSmooth background-color,
                 .2s $easingSmooth opacity;
+
+    .fp-viewing-2 & {
+        background-color: #000;
+    }
 }
 
 #fp-nav ul li:hover a span,

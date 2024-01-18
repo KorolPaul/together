@@ -21,22 +21,41 @@
         }
     }
 
-    &_success-text {
+    &_success-text,
+    &_unfilled-text {
         display: none;
         font-size: 20px;
         line-height: 24px;
-        padding: 16px 0;
+        padding: 16px 0 10px;
         @include tablet {
             font-size: 58px;
             line-height: 59px;
         }
 
+        
+    }
+
+    &_success-text {
         .success & {
             display: block;
         }
     }
 
-    &.success input[type="submit"] {
+    &_unfilled-text {
+        .unfilled & {
+            display: block;
+        }
+    }
+
+    &.success input[type="submit"],
+    &.unfilled input[type="submit"] {
         display: none;
+    }
+
+    &.filled input[type="text"]:placeholder-shown,
+    &.filled input[type="email"]:placeholder-shown
+    .error input[type="email"] {
+        @include placeholder-color($cBright);
+        border-bottom-color: $cBright;
     }
 }

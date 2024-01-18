@@ -145,12 +145,45 @@ document.querySelector('.animated-button').addEventListener('click', (e) => {
     }
 })
 
+const validateEmail = (email) => {
+    return String(email)
+        .toLowerCase()
+        .match(
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        );
+};
+
 /* form submit */
 var form = document.getElementById("form");
 
 async function handleSubmit(event) {
     event.preventDefault();
     var data = new FormData(event.target);
+
+    const emailField = form.querySelector('input[name="email"]');
+    const textField = form.querySelector('input[name="text"]');
+
+    form.classList.add('filled');
+
+    if (emailField.value === '' || textField.value === '') {
+        form.classList.add('unfilled');
+
+        setTimeout(() => {
+            shuffleText(form.querySelector('.form_unfilled-text'));
+        }, 50);
+
+        setTimeout(() => {
+            form.classList.remove('unfilled');
+        }, 800)
+        return;
+    }
+
+    if (!validateEmail(emailField)) {
+        emailField.parentElement.classList.add('error');
+        return;
+    }
+
+    emailField.parentElement.classList.remove('error');
     form.querySelector('input[type="submit"]').disabled = true;
 
     fetch(event.target.action, {
@@ -166,7 +199,6 @@ async function handleSubmit(event) {
             setTimeout(() => {
                 shuffleText(form.querySelector('.form_success-text'));
             }, 50);
-            form.reset()
         } else {
             response.json().then(data => {
                 console.error(data);

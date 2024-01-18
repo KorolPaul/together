@@ -40,38 +40,17 @@
         }
     }
 
-    &_main-letter,
-    &_letter {
-        pointer-events: none;
-        display: inline-block;
-        vertical-align: bottom  ;
-    }
-
-    &_letter {
-        overflow: hidden;
-        width: 0;
+    &_desktop {
+        display: none;
         @include tablet {
-            width: auto;
-        }
-
-        .active & {
-            animation: letter .01s linear forwards;
-        }
-
-        @for $i from 1 through 20 {
-            &:nth-child(#{$i}) {
-                animation-delay: #{0.01 * $i}s;
-            }
+            display: block;
         }
     }
-}
 
-@keyframes letter {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: auto;
+    &_mobile {
+        display: block;
+        @include tablet {
+            display: none;
+        }
     }
 }
