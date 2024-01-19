@@ -19,11 +19,6 @@ new fullpage('#fullpage', {
     easingcss3: 'cubic-bezier(0.38, 0.005, 0.215, 1)',
     lazyLoading: false,
     observer: false,
-    afterRender: function () {
-        videoElements.forEach(video => {
-            video.setAttribute('autoplay');
-        });
-    }
 });
 
 document.querySelectorAll('.page_next').forEach(el => el.addEventListener('click', (e) => {
@@ -219,3 +214,17 @@ async function handleSubmit(event) {
     });
 }
 form.addEventListener("submit", handleSubmit);
+
+/* form slider */
+// const slider = tns({
+//     container: document.querySelectorAll('.slider'),
+//     items: 1,
+//     gutter: 0,
+//     mouseDrag: true,
+//     autoplay: false,
+//     nav: false,
+//     navPosition: 'bottom',
+//     controls: true,
+//     loop: false,
+//     mode: 'gallery',
+// });

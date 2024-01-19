@@ -2,6 +2,14 @@
     padding: 23px 0 0;
     margin: auto;
 
+    &_caption {
+        font-size: 20px;
+        max-width: 390px;
+        @include tablet {
+            margin-bottom: 40px;
+        }
+    }
+
     &_row {
         margin: 0 0 10px;
         position: relative;

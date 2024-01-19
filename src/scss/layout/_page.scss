@@ -88,6 +88,11 @@
         }
     }
 
+    .fp-viewing-2-0 & h1,
+    .fp-viewing-2-1 & h1 {
+        margin-bottom: 0;
+    }
+
     &:not(:first-child) .fp-overflow {
         // height: 100%;
         // mask: linear-gradient(to bottom, transparent 0%, transparent 9%, #fff 25%, #fff 100%);
