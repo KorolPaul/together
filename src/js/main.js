@@ -8,7 +8,6 @@ if (!isMobile) {
 }
 
 new fullpage('#fullpage', {
-    //options here
     autoScrolling: true,
     scrollHorizontally: true,
     licenseKey: 'N8LA8-9CTZJ-KPK56-J8LJ6-LHXVL',
