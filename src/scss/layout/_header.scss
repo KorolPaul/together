@@ -45,7 +45,8 @@
             padding: 14px 0 10px;
         }
         
-        .fp-viewing-2-0 & {
+        .fp-viewing-2-0 &,
+        .fp-viewing-2-1 & {
             color: $color;
         }
     }

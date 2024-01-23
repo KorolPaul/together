@@ -185,7 +185,8 @@ html.fp-enabled,
                 .2s $easingSmooth background-color,
                 .2s $easingSmooth opacity;
 
-    .fp-viewing-2-0 & {
+    .fp-viewing-2-0 &,
+    .fp-viewing-2-1 & {
         background-color: #000;
     }
 }
