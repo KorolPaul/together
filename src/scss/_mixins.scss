@@ -37,8 +37,11 @@
 }
 
 @mixin layout {
-    padding-left: $indent;
+    padding-left: $indent * 2;
     padding-right: $indent;
+    @include tablet() {
+        padding-left: $indent;
+    }
     @include desktop {
         max-width: $max-width;
         margin-left: auto;

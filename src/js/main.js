@@ -14,14 +14,29 @@ new fullpage('#fullpage', {
     menu: '#menu',
     navigation: true,
     navigationPosition: 'bottom',
+    loopHorizontal: false,
     easing: 'easeInOutCubic',
     easingcss3: 'cubic-bezier(0.38, 0.005, 0.215, 1)',
     lazyLoading: false,
     observer: false,
+    beforeLeave: function(origin, destination, direction, trigger) {
+        if (origin.index === 2) {
+            const slide = fullpage_api.getActiveSlide().index;
+
+            if (destination.index === 3 && slide === 0)  {
+                document.querySelector('[data-page="3"] .fp-next').click();
+                return false;
+
+            } else if (destination.index === 1 && slide === 1) {
+                document.querySelector('[data-page="3"] .fp-prev').click();
+                return false;
+
+            }
+        }
+    }
 });
 
 document.querySelectorAll('.page_next').forEach(el => el.addEventListener('click', (e) => {
-    console.log(e.target.dataset.up);
     if (e.target.dataset.up === '') {
         fullpage_api.moveTo(1)
     } else {
@@ -111,7 +126,6 @@ document.querySelectorAll('h1').forEach(el => {
         const animationsCount = isMobile ? 10 : 15;
 
         if (isIntersecting) {
-            console.log(target.dataset.text, intersectionRatio);
             const initialText = target.dataset.text;
             const initialTextArray = target.innerText.split('');
 
@@ -182,7 +196,7 @@ async function handleSubmit(event) {
         return;
     }
 
-    if (!validateEmail(emailField)) {
+    if (!validateEmail(emailField.value)) {
         emailField.parentElement.classList.add('error');
         return;
     }

@@ -4,8 +4,7 @@
     gap: 16px;
     @include desktop {
         flex-direction: row;
-        gap: 100px;
-        justify-content: space-between;
+        gap: 170px;
     }
 
     &_title {

@@ -21,6 +21,7 @@ input[type="tel"] {
                 .2s $easingSmooth box-shadow;
     @include tablet {
         font-size: 58px;
+        max-width: 604px;
     }
 
     &:focus {

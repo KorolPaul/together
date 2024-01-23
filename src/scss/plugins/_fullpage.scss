@@ -69,6 +69,8 @@ html.fp-enabled,
     cursor: pointer;
     margin-top: -38px;
     transform: translate3d(0, 0, 0);
+
+    opacity: 0;
 }
 
 .fp-prev {
@@ -183,7 +185,7 @@ html.fp-enabled,
                 .2s $easingSmooth background-color,
                 .2s $easingSmooth opacity;
 
-    .fp-viewing-2 & {
+    .fp-viewing-2-0 & {
         background-color: #000;
     }
 }

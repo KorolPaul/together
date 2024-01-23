@@ -7,7 +7,7 @@
     z-index: 1111;
     pointer-events: none;
     background-color: $cBright;
-    animation: autohide 4.2s linear forwards;
+    animation: autohide 3.75s linear forwards;
 
     &_animation {
         position: absolute;
@@ -36,7 +36,7 @@
         opacity: 1;
     }
 
-    95% {
+    86% {
         opacity: 1;
     }
 
