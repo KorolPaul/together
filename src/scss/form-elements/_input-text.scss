@@ -20,8 +20,10 @@ input[type="tel"] {
                 .2s $easingSmooth color,
                 .2s $easingSmooth box-shadow;
     @include tablet {
-        font-size: 58px;
         max-width: 604px;
+    }
+    @include big-height {
+        font-size: 58px;
     }
 
     &:focus {

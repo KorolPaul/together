@@ -8,12 +8,15 @@
     margin: 0 0 32px;
     @include tablet {
         font-size: 200px;
-        line-height: 1.15;
         letter-spacing: -10px;
     }
     @include desktop-large {
         font-size: 350px;
+        line-height: .95;
         letter-spacing: -17.5px;
+    }
+    @include big-height {
+        line-height: 1.15;
     }
 }
 %heading-2 {

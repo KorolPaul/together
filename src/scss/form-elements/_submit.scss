@@ -14,7 +14,7 @@ input[type="submit"] {
     transition: .2s $easingSmooth border-color,
                 .2s $easingSmooth color,
                 .2s $easingSmooth opacity;
-    @include tablet {
+    @include big-height {
         font-size: 58px;
     }
 

@@ -7,7 +7,13 @@
     z-index: 1111;
     pointer-events: none;
     background-color: $cBright;
+    transition: .5s $easing opacity;
     animation: autohide 3.75s linear forwards;
+
+    .loaded & {
+        opacity: 0;
+        animation-duration: .5s;
+    }
 
     &_animation {
         position: absolute;

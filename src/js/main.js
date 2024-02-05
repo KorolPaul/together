@@ -216,6 +216,7 @@ async function handleSubmit(event) {
 
             setTimeout(() => {
                 shuffleText(form.querySelector('.form_success-text'));
+                form.querySelector('.form_success-arrow').play();
             }, 50);
         } else {
             response.json().then(data => {
@@ -228,16 +229,10 @@ async function handleSubmit(event) {
 }
 form.addEventListener("submit", handleSubmit);
 
-/* form slider */
-// const slider = tns({
-//     container: document.querySelectorAll('.slider'),
-//     items: 1,
-//     gutter: 0,
-//     mouseDrag: true,
-//     autoplay: false,
-//     nav: false,
-//     navPosition: 'bottom',
-//     controls: true,
-//     loop: false,
-//     mode: 'gallery',
-// });
+/* preloader */
+function removePreloader(e) {
+    document.body.classList.add('loaded');
+}
+
+document.body.addEventListener('click', removePreloader);
+document.body.addEventListener('wheel', removePreloader);

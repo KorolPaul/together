@@ -1,5 +1,4 @@
 .header {
-    @include layout;
     z-index: 11;
     color: $cLight;
     width: 100%;
@@ -11,10 +10,13 @@
         top: 0;
         transform: translateX(-50%);
         left: 50%;
-        max-width: $max-width;
     }
     
     &_holder {
+        @include layout;
+    }
+
+    &_content {
         @include layout-inner;
         display: flex;
         justify-content: space-between;
@@ -51,7 +53,7 @@
         }
     }
 
-    &_content {
+    &_right {
         @include tablet {
             display: flex;
             align-items: center;
@@ -76,6 +78,11 @@
 
         .fp-viewing-0 & {
             opacity: 1;
+        }
+
+        .fp-viewing-2-0 &,
+        .fp-viewing-2-1 & {
+            filter: brightness(0);
         }
 
         & > * {
