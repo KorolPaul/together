@@ -92,15 +92,32 @@
         @include big-height {
             padding-top: 140px;
         }
+
+        i {
+            font-family: 'Antonym';
+            font-style: normal;
+            letter-spacing: .005em;
+            color: transparent;
+            -webkit-text-stroke: 2px $cLight;
+        }
+
+        i + span {
+            margin-left: 25px;
+        }
+
+        i.filled {
+            color: $cLight;
+        }
     }
 
     .fp-viewing-2-0 & h1,
     .fp-viewing-2-1 & h1 {
         margin-bottom: 0;
+
+        
     }
 
-    &:not(:first-child) .fp-overflow {
-        // height: 100%;
-        // mask: linear-gradient(to bottom, transparent 0%, transparent 9%, #fff 25%, #fff 100%);
+     &[data-page="3"] i {
+        -webkit-text-stroke: 2px $color;
     }
 }
