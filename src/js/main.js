@@ -125,7 +125,7 @@ document.querySelectorAll('h1[data-heading-text]').forEach(el => {
         const { isIntersecting, intersectionRatio , target } = e[0];
         const animationsCount = isMobile ? 10 : 15;
 
-        if (isIntersecting) {
+        if (isIntersecting && !isMobile) {
             const initialText = target.innerHTML;
             const initialTextArray = Array.from(target.children);
 
