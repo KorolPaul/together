@@ -120,26 +120,28 @@ document.querySelector('.header_video-sound')?.addEventListener('click', functio
 });
 
 /* title animation */
-document.querySelectorAll('h1[data-heading-text]').forEach(el => {
+/* title animation */
+document.querySelectorAll('h1').forEach(el => {
     const observerCallback = function (e) {
-        const { isIntersecting, intersectionRatio , target } = e[0];
+        const { isIntersecting, intersectionRatio, target } = e[0];
         const animationsCount = isMobile ? 10 : 15;
 
-        if (isIntersecting && !isMobile) {
-            const initialText = target.innerHTML;
-            const initialTextArray = Array.from(target.children);
+        if (isIntersecting) {
+            const initialText = target.dataset.text;
+            const initialTextArray = target.innerText.split('');
 
             let count = 0;
+
             const interval = setInterval(() => {
                 const newText = shuffle(initialTextArray);
 
                 currentArray = newText;
-                target.innerHTML = newText.map(node => node.outerHTML).join('');
+                target.innerText = newText.join('');
                 count++;
 
                 if (count >= animationsCount) {
                     clearInterval(interval);
-                    target.innerHTML = initialText;
+                    target.innerText = initialText;
                 }
             }, 25);
         }
