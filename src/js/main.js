@@ -126,7 +126,7 @@ document.querySelectorAll('h1').forEach(el => {
         const { isIntersecting, intersectionRatio, target } = e[0];
         const animationsCount = isMobile ? 10 : 15;
 
-        if (isIntersecting) {
+        if (isIntersecting && !isMobile) {
             const initialText = target.dataset.text;
             const initialTextArray = target.innerText.split('');
 
